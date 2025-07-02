@@ -10,6 +10,16 @@ import Footer from "./components/Footer";
 import Clothes from "./components/productItems/Clothes";
 import Headphone from "./components/productItems/Headphone";
 import MenFootwear from "./components/productItems/MenFootwear";
+import WomenTops from "./components/productItems/WomenTops";
+import MenJeans from "./components/productItems/MenJeans";
+import Phones from "./components/productItems/Phones";
+import Monitor from "./components/productItems/Monitor";
+import Watches from "./components/productItems/Watches";
+import WomenFootwear from "./components/productItems/WomenFootwear";
+import DryFruits from "./components/productItems/DryFruits";
+import WallWatches from "./components/productItems/WallWatches";
+import BedSheets from "./components/productItems/BedSheets";
+import Shopnnow from "./components/productItems/Shopnnow";
 
 function App() {
   return (
@@ -26,6 +36,16 @@ function App() {
           <Route path="Clothes" element={<Clothes />} />
           <Route path="Headphone" element={<Headphone />} />
           <Route path="MenFootwear" element={<MenFootwear />} />
+          <Route path="WomenTops" element={<WomenTops />} />
+          <Route path="MenJeans" element={<MenJeans />} />
+          <Route path="Phones" element={<Phones />} />
+          <Route path="Monitor" element={<Monitor />} />
+          <Route path="Watches" element={<Watches />} />
+          <Route path="WomenFootwear" element={<WomenFootwear />} />
+          <Route path="DryFruits" element={<DryFruits />} />
+          <Route path="WallWatches" element={<WallWatches />} />
+          <Route path="BedSheets" element={<BedSheets />} />
+          <Route path="Shopnow" element={<Shopnnow />} />
         </Routes>
       </BrowserRouter>
     </>
