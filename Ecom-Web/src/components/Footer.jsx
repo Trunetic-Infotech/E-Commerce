@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const footerLinks = [
@@ -40,6 +41,23 @@ function Footer() {
     },
   ];
 
+  // Helper to convert link text to route paths
+  const generatePath = (linkText) => {
+  const overrides = {
+    "Cancellation & Returns": "/cancellation-&-returns",
+    "Return Policy": "/return-policy", 
+    "About Us": "/about-us",
+    "Contact Us": "/contact-us",
+    "Terms Of Use": "/terms-of-use",
+    "Corporate Information": "/corporate-information",
+    "Report Infringement": "/report-infringement",
+    "Opencart Stories": "/opencart-stories",
+  };
+
+  return overrides[linkText] || "/" + linkText.toLowerCase().replace(/ & /g, "-").replace(/\s+/g, "-");
+};
+
+
   return (
     <footer className="bg-[#1e1e1e] text-white py-10">
       <div className="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-5 gap-10">
@@ -53,12 +71,12 @@ function Footer() {
               <ul className="space-y-2">
                 {section.links.map((link, i) => (
                   <li key={i}>
-                    <a
-                      href="#"
+                    <Link
+                      to={generatePath(link)}
                       className="text-gray-300 hover:text-white text-sm transition"
                     >
                       {link}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>

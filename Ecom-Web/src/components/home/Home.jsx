@@ -1,22 +1,21 @@
-import React, { useState } from "react";
-import Navbar from "../Navbar";
-import HomeCarousel from "./HomeCarousel";
+import React from "react";
 import Banner from "./Banner";
+import HomeCarousel from "./HomeCarousel";
 import Carts from "./Carts";
-import DiscountCarts from "./DiscountCart";
+import DiscountCart from "./DiscountCart";
 import Footer from "../Footer";
 
-function Home() {
+const Home = () => {
   return (
     <>
-      <Navbar />
       <Banner />
       <HomeCarousel />
       <Carts />
-      <DiscountCarts />
+      <DiscountCart />
       <Footer />
+      
     </>
   );
-}
+};
 
 export default Home;

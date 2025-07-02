@@ -40,13 +40,14 @@ export default function Banner() {
             </div>
 
             {/* Right Section */}
-            <div className="w-full md:w-1/2">
+            <div className="w-full md:w-1/2 h-[300px] md:h-[400px] flex items-center justify-center">
               <img
                 src={images[current]}
                 alt={`Slide ${current + 1}`}
-                className="w-full h-auto rounded-xl object-cover transition duration-700"
+                className="h-full w-auto object-contain transition duration-700 rounded-xl"
               />
             </div>
+
           </div>
         </div>
       </div>
