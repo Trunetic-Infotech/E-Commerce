@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import image1 from "../../assets/shoes.png";
-import image2 from "../../assets/Tshirt.png";
+import image2 from "../../assets/Shirts/Tshirt.png";
 import image3 from "../../assets/Electronics.png";
 import image4 from "../../assets/Grocery.png";
 import image5 from "../../assets/smartWatch.png";

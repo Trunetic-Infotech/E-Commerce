@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../Navbar";
 
 import img1 from "../../assets/Casual-Shirts.png";
-import img2 from "../../assets/HeadPhone.png";
+import img2 from "../../assets/headphones/HeadPhone.png";
 import img3 from "../../assets/MensSlipper.png";
 import img4 from "../../assets/Woman-Top.png";
 import img5 from "../../assets/Casual-Jeans.png";
@@ -43,63 +43,63 @@ function Carts() {
       label: "Tops For Women",
       price: "₹599",
       btn: "Shop Now",
-      path: "/womens-tops",
+      path: "/WomenTops",
     },
     {
       img: img5,
       label: "Casual Jeans",
       price: "₹999",
       btn: "Shop Now",
-      path: "/jeans",
+      path: "/MenJeans",
     },
     {
       img: img6,
       label: "Apple iPhone 16",
       price: "₹89,999",
       btn: "Shop Now",
-      path: "/phones",
+      path: "/Phones",
     },
     {
       img: img7,
       label: "ASUS ROG Strix",
       price: "₹1,29,999",
       btn: "Shop Now",
-      path: "/monitors",
+      path: "/Monitor",
     },
     {
       img: img8,
       label: "Polar Pacer Pro",
       price: "₹24,999",
       btn: "Shop Now",
-      path: "/smart-watches",
+      path: "/Watches",
     },
     {
       img: img9,
       label: "Women's Flat Sandal",
       price: "₹499",
       btn: "Shop Now",
-      path: "/womens-footwear",
+      path: "/WomenFootwear",
     },
     {
       img: img10,
       label: "Dry Fruits & Nuts",
       price: "₹1,199",
       btn: "Shop Now",
-      path: "/dry-fruits",
+      path: "/DryFruits",
     },
     {
       img: img11,
       label: "Wall Clock",
       price: "₹799",
       btn: "Shop Now",
-      path: "/home-decor",
+      path: "/WallWatches",
     },
     {
       img: img12,
       label: "Bed Sheets",
       price: "₹1,099",
       btn: "Shop Now",
-      path: "/bed-sheets",
+      path: "/BedSheets",
     },
   ];
 
@@ -124,16 +124,29 @@ function Carts() {
                 {item.price}
               </p>
 
-              <Link
-                to={item.path}
-                className="text-blue-600 hover:underline text-sm mb-4 inline-block"
-              >
-                Explore Now
-              </Link>
+              <div className="flex flex-col gap-3 mt-4">
+                <Link
+                  to={item.path}
+                  onClick={() => window.scrollTo(0, 0)}
+                  className="text-indigo-600 text-sm font-medium hover:underline"
+                >
+                  Explore Now
+                </Link>
 
-              <button className="w-full bg-blue-600 text-white py-2 rounded-full hover:bg-blue-700 transition">
-                {item.btn}
-              </button>
+                <Link
+                  to="/Shopnow"
+                  state={{
+                    product: {
+                      img: item.img,
+                      label: item.label,
+                      price: item.price,
+                    },
+                  }}
+                  className="inline-block text-center px-4 py-2 bg-indigo-600 text-white text-sm font-medium rounded-full hover:bg-indigo-700 transition duration-300 shadow-md"
+                >
+                  Shop Now
+                </Link>
+              </div>
             </div>
           ))}
         </div>
